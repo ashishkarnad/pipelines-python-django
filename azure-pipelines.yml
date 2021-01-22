@@ -1,4 +1,4 @@
-# Python Django
+ # Python Django
 # Test a Django project on multiple versions of Python.
 # Add steps that analyze code, save build artifacts, deploy, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/python
@@ -25,6 +25,7 @@ steps:
           raise SystemExit('Could not find a Django project')
       project_location = path.dirname(path.abspath(manage_py))
       print('Found Django project in', project_location)
+      print('This is test cmd')
       print('##vso[task.setvariable variable=projectRoot]{}'.format(project_location))
 
 - script: |
